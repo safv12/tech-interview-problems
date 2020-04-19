@@ -1,4 +1,4 @@
-# [HARD] Longest consecutive sequence
+# Longest consecutive sequence
 
 Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
 Your algorithm should run in O(n) complexity.
