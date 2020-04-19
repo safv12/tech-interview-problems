@@ -39,7 +39,7 @@ Before start to count the longest streak we need to find the lower element in th
 
 Once we have the HashSet configured we could start to find the streaks for that we'll do the next steps.
 
-- **input**: `[5, 2, 3, 1, 4, 100, 200]
+- **input**: `[5, 2, 3, 1, 4, 100, 200]`
 - **Step 1** Iterate all over the array to fill our - HashSet. `lookup = {5, 2, 3, 1, 4, 100, 200}`
 - **Step 2** Iterate over the array again but for each element look if exist the previous consecutive, if the previous consecutive exists ignore the current number and continue iterating over the array.
 - **Step 3**: If the previous consecutive does not exists, then, start to count the current streak from the current number.
