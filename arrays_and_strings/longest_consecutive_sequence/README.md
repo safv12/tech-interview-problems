@@ -1,7 +1,7 @@
 # Longest consecutive sequence
 
 Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
-Your algorithm should run in O(n) complexity.
+Your algorithm should run in `O(n)` complexity.
 
 #### Example
 **Input**: [3, 2, 100, 5, 20, 4, 21]
@@ -10,12 +10,12 @@ Your algorithm should run in O(n) complexity.
 
 **Explanation**: The answer is 4 because the longest consecutive sequence is [2, 3, 4, 5] and the sequence length is 4.
 
-### Clarifications
+## Clarifications
 
 - Could the array contain repeated elements? **Yes**
 - Could the array contain repeated elements? **Yes**
 
-### Solution
+## Solution
 
 Try to solve this problem before seeing the solution.
 
