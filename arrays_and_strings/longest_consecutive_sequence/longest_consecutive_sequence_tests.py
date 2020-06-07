@@ -19,7 +19,7 @@ class LongestConsecutiveSequenceTests(unittest.TestCase):
         return the longest streak counting repeated only
         once.
         """
-        result = solution([3, 1, 1, 2, 4, 100, 2])
+        result = solution([3, 1, 2, 4, 100, 2])
         self.assertEqual(4, result)
 
     def test_no_streak(self):
