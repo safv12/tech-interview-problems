@@ -22,6 +22,22 @@ class TwoSumTests(unittest.TestCase):
         result = solution([3, 1, 1, 2, 4, 100, 2], 7)
         self.assertTrue(result)
 
+    def test_with_two_sum_at_the_end(self):
+        """
+        Given an array with the required elements
+        to sum the target at the end, should return true.
+        """
+        result = solution([3, 1, 1, 2, 4, 100, 2], 102)
+        self.assertTrue(result)
+
+    def test_with_two_sum_at_the_begining(self):
+        """
+        Given an array with the required elements
+        to sum the target at the begining, should return true.
+        """
+        result = solution([3, 1, 1, 2, 4, 100, 2], 4)
+        self.assertTrue(result)
+
     def test_with_no_two_sum(self):
         """
         Given an array without the required elements to

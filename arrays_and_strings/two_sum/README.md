@@ -35,12 +35,12 @@ For this solution I iterate over the array only once, and for each element in th
 
 ```python
 def solution(arr, target):
-    seen = set() # This hashset contains the element that I already seen.
+    seen = set() # This hashset contains the element that I already saw.
     for num in arr: # I iterate over each element in the array.
         complement = target - num # I calculate the complement for the current element.
-        if complement in seen: # If I already seen this complement return true.
+        if complement in seen: # If I already saw this complement then I return true.
             return True
-        seen.add(num) # Otherwise I add the current number to the seen hashset.
+        seen.add(num) # Otherwise, I add the current number to the seen hashset.
     return False # If there are no more elements then I return false.
 ```
 
