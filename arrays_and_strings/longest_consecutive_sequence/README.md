@@ -13,7 +13,6 @@ Your algorithm should run in `O(n)` complexity.
 ## Clarifications
 
 - Could the array contain repeated elements? **Yes**
-- Could the array contain repeated elements? **Yes**
 
 ## Solution
 
