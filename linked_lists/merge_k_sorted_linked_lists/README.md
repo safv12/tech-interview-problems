@@ -44,31 +44,31 @@ This solution relies in a data structure called Heap or PriorityQueue [here](htt
 - Step 3: Retrieve all values from the heap and fill the new linked list.
 
 ```python
-import heapq
+from queue import PriorityQueue
 
 def solution(lists_arr):
-    # Some validations over the array.
-    if lists is None or len(lists) == 0:
+    if lists is None:
         return None
 
     # Creates a fill the priority queue
-    heap = []
-    heapq.heapify(heap)
-    for head in lists:
-        while head is not None:
-            heapq.heappush(heap, head.val)
-            head = head.next
+    priority_queue = PriorityQueue()
+    for linked_list in lists:
+        while linked_list is not None:
+            priority_queue.put(linked_list.val)
+            linked_list = linked_list.next
 
     # Builds the new linked list
-    new_list = ListNode(-1)
-    head_node = new_list
-    while len(heap) > 0:
-        new_list.next = ListNode(heapq.heappop(heap))
-        new_list = new_list.next
+    head = point = ListNode(0)
+    while not priority_queue.empty():
+        val = priority_queue.get()
+        point.next = ListNode(val)
+        point = point.next
 
-    return head_node.next
+    return head.next
 ```
 
-Time complexity of this solution would be O(nk Log k)
+Time complexity : O(N log k) where K is the number of linked lists.
+- The comparison cost is O(log k) for every pop and insertion to priority queue. But finding the node with the smallest value just costs O(1) time.
+- There are N nodes in the final linked list.
 </p>
 </details>

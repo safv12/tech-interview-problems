@@ -10,7 +10,7 @@ Input:
 ]
 Output: 1->1->2->3->4->4->5->6
 """
-import heapq
+from queue import PriorityQueue
 
 
 class ListNode:
@@ -25,23 +25,21 @@ def solution(lists):
     This solution uses a heap data structure to build
     the sorted linked list.
     """
-    # Some validations over the array.
-    if lists is None or len(lists) == 0:
+    if lists is None:
         return None
 
     # Creates a fill the priority queue
-    heap = []
-    heapq.heapify(heap)
-    for head in lists:
-        while head is not None:
-            heapq.heappush(heap, head.val)
-            head = head.next
+    priority_queue = PriorityQueue()
+    for linked_list in lists:
+        while linked_list is not None:
+            priority_queue.put(linked_list.val)
+            linked_list = linked_list.next
 
     # Builds the new linked list
-    new_list = ListNode(-1)
-    head_node = new_list
-    while len(heap) > 0:
-        new_list.next = ListNode(heapq.heappop(heap))
-        new_list = new_list.next
+    head = point = ListNode(0)
+    while not priority_queue.empty():
+        val = priority_queue.get()
+        point.next = ListNode(val)
+        point = point.next
 
-    return head_node.next
+    return head.next
