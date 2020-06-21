@@ -1,4 +1,4 @@
-# [HARD] Merge K sorted linked lists
+# [HARD] Merge K sorted linked lists
 
 Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
 
